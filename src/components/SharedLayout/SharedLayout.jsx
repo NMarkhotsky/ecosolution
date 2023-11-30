@@ -6,8 +6,8 @@ export const SharedLayout = () => {
   return (
     <>
       <Header>Header</Header>
-      <Main>Main</Main>
-      <Footer>Footer</Footer>
+      <Main></Main>
+      <Footer></Footer>
     </>
   );
 };

@@ -34,6 +34,7 @@ const transitionHover = '250ms cubic-bezier(0.4, 0, 0.2, 1)';
 export const theme = {
   colors: {
     backgroundMain: '#F3F5FA',
+    textMain: '#173D33',
   },
   fonts,
   media,

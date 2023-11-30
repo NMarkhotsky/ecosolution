@@ -5,9 +5,9 @@ import { selectDesktop, selectPhone, selectTablet } from '../utils';
 export const GlobalStyle = createGlobalStyle`
 
 #root {
-   width: 100%;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 36px 20px 24px;
 
   @media ${selectPhone} {
     width: 480px;
@@ -15,12 +15,12 @@ export const GlobalStyle = createGlobalStyle`
 
   @media ${selectTablet} {
     width: 768px;
-    padding: 0 30px;
+    padding: 36px 30px 40px;
   }
 
   @media ${selectDesktop} {
     width: 1280px;
-    padding: 0 100px;
+    padding: 24px 100px 40px;
   }
 }
 
@@ -32,7 +32,7 @@ body {
   text-rendering: optimizeSpeed;
 
   background-color: ${({ theme }) => theme.colors.backgroundMain};
-  ${'' /* color: ${({ theme }) => theme.colors.text}; */}
+  color: ${({ theme }) => theme.colors.textMain};
 
   ${'' /* transition: ${({ theme }) => theme.transitionHover}; */}
 }
@@ -61,12 +61,15 @@ img {
 
 a {
   text-decoration: none;
+  color: inherit;
+
 }
 
 button {
   padding: 0;
   border: none;
   background-color: transparent;
+  color: inherit;
   cursor: pointer;
 }
 `;
