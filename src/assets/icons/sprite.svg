@@ -4,8 +4,8 @@
       <path stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.333" d="m12.759 7.905-8.093 8.093 8.093 8.093M27.333 15.999H4.893"/>
     </symbol>
     <symbol id="icon-arrow-right">
-<path d="M9.62012 4.45312L13.6668 8.49979L9.62012 12.5465" stroke="#173D33" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M2.33325 8.5H13.5533" stroke="#173D33" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>    </symbol>
+      <path d="M9.62012 4.45312L13.6668 8.49979L9.62012 12.5465" stroke="#173D33" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M2.33325 8.5H13.5533" stroke="#173D33" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>    </symbol>
     <symbol id="icon-arrow-right-slider" viewBox="0 0 32 32">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.333" d="m19.241 7.905 8.093 8.093-8.093 8.093M4.668 15.999h22.44"/>
     </symbol>
