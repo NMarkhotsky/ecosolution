@@ -62,7 +62,10 @@ export const Hero = () => {
         <Image
           src={heroImage}
           alt="Energy"
-          srcSet={`${heroImage} 1x, ${heroImage.replace('.png', '@2x.png')} 2x`}
+          srcSet={`${heroImage} 1x, ${heroImage.replace(
+            '.png',
+            '@2x.png'
+          )} 2x, ${heroImage.replace('.png', '@3x.png')} 3x`}
         />
       </div>
     </Section>
