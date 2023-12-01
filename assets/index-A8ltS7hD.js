@@ -188,9 +188,8 @@ button {
 `,Wm=M.div`
   position: absolute;
   top: 36px;
-  bottom: 36px;
-
   width: 320px;
+  height: 90vh;
 
   display: flex;
   align-items: flex-start;
