@@ -22,7 +22,7 @@ export const Container = styled.div`
   position: absolute;
   top: 36px;
   width: 320px;
-  height: 90vh;
+  height: 80vh;
 
   display: flex;
   align-items: flex-start;
@@ -38,7 +38,6 @@ export const Container = styled.div`
 
   @media ${selectTablet} {
     right: 30px;
-    height: 700px;
   }
 
   @media ${selectDesktop} {
