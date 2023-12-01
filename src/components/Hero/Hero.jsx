@@ -13,6 +13,8 @@ import {
   Title,
 } from './Hero.styled';
 import heroImage from '../../assets/images/hero/hero.png';
+import heroImage2x from '../../assets/images/hero/hero@2x.png';
+import heroImage3x from '../../assets/images/hero/hero@3x.png';
 
 export const Hero = () => {
   return (
@@ -62,10 +64,7 @@ export const Hero = () => {
         <Image
           src={heroImage}
           alt="Energy"
-          srcSet={`${heroImage} 1x, ${heroImage.replace(
-            '.png',
-            '@2x.png'
-          )} 2x, ${heroImage.replace('.png', '@3x.png')} 3x`}
+          srcSet={`${heroImage} 1x, ${heroImage2x} 2x, ${heroImage3x} 3x`}
         />
       </div>
     </Section>
