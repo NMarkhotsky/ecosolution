@@ -19,7 +19,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   @media ${selectDesktop} {
-    width: 1280px;
+    min-width: 100%;
     padding: 24px 100px 40px;
   }
 }
@@ -60,6 +60,7 @@ img {
 }
 
 a {
+  display: block;
   text-decoration: none;
   color: inherit;
 

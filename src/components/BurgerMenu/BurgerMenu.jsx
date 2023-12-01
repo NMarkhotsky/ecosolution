@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { navLink } from '../../constants/navLink';
 import { Icon } from '../../shared/Icon/Icon';
 import {
   BackDrop,
@@ -7,6 +8,8 @@ import {
   Nav,
   NavList,
   NavListItem,
+  NavSocial,
+  NavSocialLink,
 } from './BurgerMenu.styled';
 
 export const BurgerMenu = ({ onClose }) => {
@@ -25,63 +28,29 @@ export const BurgerMenu = ({ onClose }) => {
         <span></span>
         <Nav>
           <NavList>
-            <NavListItem>
-              <a href="#">
-                Main
-                <Icon
-                  iconName="icon-arrow-top-right"
-                  width={'16px'}
-                  height={'16px'}
-                  stroke={'inherit'}
-                />
-              </a>
-            </NavListItem>
-            <NavListItem>
-              <a href="#">
-                About
-                <Icon
-                  iconName="icon-arrow-top-right"
-                  width={'16px'}
-                  height={'16px'}
-                  stroke={'inherit'}
-                />
-              </a>
-            </NavListItem>
-            <NavListItem>
-              <a href="#">
-                Cases
-                <Icon
-                  iconName="icon-arrow-top-right"
-                  width={'16px'}
-                  height={'16px'}
-                  stroke={'inherit'}
-                />
-              </a>
-            </NavListItem>
-            <NavListItem>
-              <a href="#">
-                FAQ
-                <Icon
-                  iconName="icon-arrow-top-right"
-                  width={'16px'}
-                  height={'16px'}
-                  stroke={'inherit'}
-                />
-              </a>
-            </NavListItem>
-            <NavListItem>
-              <a href="#">
-                Contact Us
-                <Icon
-                  iconName="icon-arrow-top-right"
-                  width={'16px'}
-                  height={'16px'}
-                  stroke={'inherit'}
-                />
-              </a>
-            </NavListItem>
+            {navLink.map(({ id, name }) => (
+              <NavListItem key={id}>
+                <a href="#">
+                  {name}
+                  <Icon
+                    iconName="icon-arrow-top-right"
+                    width={'16px'}
+                    height={'16px'}
+                    stroke={'inherit'}
+                  />
+                </a>
+              </NavListItem>
+            ))}
           </NavList>
         </Nav>
+        <NavSocial>
+          <NavSocialLink>
+            <Icon iconName="icon-facebook" width={24} height={24} />
+          </NavSocialLink>
+          <NavSocialLink>
+            <Icon iconName="icon-instagram" width={24} height={24} />
+          </NavSocialLink>
+        </NavSocial>
       </Container>
     </BackDrop>
   );

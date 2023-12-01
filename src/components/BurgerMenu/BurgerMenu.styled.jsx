@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { selectDesktop } from '../../utils';
+import { selectDesktop, selectTablet } from '../../utils';
 
 export const BackDrop = styled.div`
   width: 100%;
@@ -14,25 +14,37 @@ export const BackDrop = styled.div`
   justify-content: center;
   align-items: center;
 
-  background: rgba(23, 61, 51, 0.25);
+  background-color: rgba(23, 61, 51, 0.25);
   backdrop-filter: blur(2px);
 `;
 
 export const Container = styled.div`
   position: absolute;
-  top: 24px;
-  right: 100px;
+  top: 36px;
+  bottom: 36px;
+
+  width: 320px;
+
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 
   padding: 24px;
 
   border-radius: 25px;
-  background: rgba(23, 61, 51, 0.75);
+
+  background-color: rgba(23, 61, 51, 0.75);
 
   backdrop-filter: blur(12.5px);
 
+  @media ${selectTablet} {
+    right: 30px;
+    height: 700px;
+  }
+
   @media ${selectDesktop} {
-    width: 375px;
-    height: 873px;
+    top: 24px;
+    right: 100px;
   }
 
   & > span {
@@ -63,8 +75,8 @@ export const NavList = styled.ul`
 `;
 
 export const NavListItem = styled.li`
-  color: #97d28b40;
-  stroke: #97d28b40;
+  color: #fff;
+  stroke: #fff;
 
   font-size: 24px;
   letter-spacing: -0.96px;
@@ -72,13 +84,32 @@ export const NavListItem = styled.li`
   &:hover,
   :active,
   :focus {
-    color: #fff;
-    stroke: #fff;
+    color: #97d28b;
+    stroke: #97d28b;
   }
 
   & > a {
     display: flex;
     align-items: center;
     gap: 8px;
+  }
+`;
+
+export const NavSocial = styled.ul`
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+`;
+
+export const NavSocialLink = styled.li`
+  & > svg > use {
+    stroke: #ffffff;
+  }
+
+  & :hover,
+  :active,
+  :focus {
+    stroke: #97d28b;
+    /* fill: #97d28b; */
   }
 `;

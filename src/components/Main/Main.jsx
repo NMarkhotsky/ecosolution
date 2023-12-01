@@ -1,4 +1,11 @@
+import { Hero } from '../Hero/Hero';
+import { MainContainer } from './Main.styled';
+
 /* eslint-disable react/prop-types */
-export const Main = ({ children }) => {
-  return <main>{children}</main>;
+export const Main = () => {
+  return (
+    <MainContainer>
+      <Hero />
+    </MainContainer>
+  );
 };
