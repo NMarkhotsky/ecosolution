@@ -3,6 +3,17 @@ import { selectTablet, selectDesktop } from '../../utils';
 
 export const Section = styled.section`
   margin-top: 146px;
+  margin-bottom: 36px;
+
+  @media ${selectTablet} {
+    margin-top: 164px;
+    margin-bottom: 100px;
+  }
+
+  @media ${selectDesktop} {
+    margin-top: 200px;
+    margin-bottom: 120px;
+  }
 `;
 
 export const Title = styled.h1`
