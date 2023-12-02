@@ -106,13 +106,13 @@ export const GridList = styled.ul`
 
 export const GridItem = styled.li`
   padding: 12px;
-  height: 197px;
+  min-height: 197px;
 
   background-color: #eaedf1;
 
   @media ${selectDesktop} {
     padding: 48px 24px;
-    height: auto;
+    height: 339px;
   }
 `;
 
@@ -122,6 +122,9 @@ export const Image = styled.img`
 `;
 
 export const ItemTitle = styled.h3`
+  display: flex;
+  align-items: center;
+
   font-family: ${({ theme }) => theme.fonts.secondary};
   font-weight: 400;
   line-height: 24px;
@@ -132,7 +135,7 @@ export const ItemTitle = styled.h3`
   }
 
   @media ${selectDesktop} {
-    font-size: 25px;
+    font-size: 32px;
     line-height: 48px;
   }
 
