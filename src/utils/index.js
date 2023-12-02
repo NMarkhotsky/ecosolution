@@ -3,5 +3,6 @@ import {
   selectTablet,
   selectDesktop,
 } from './selectMediaRequests';
+import { formatNumberWithDots } from './formatNumber';
 
-export { selectPhone, selectTablet, selectDesktop };
+export { selectPhone, selectTablet, selectDesktop, formatNumberWithDots };

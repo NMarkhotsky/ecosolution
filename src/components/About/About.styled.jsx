@@ -1,7 +1,17 @@
 import styled from 'styled-components';
 import { selectDesktop, selectTablet } from '../../utils';
 
-export const Section = styled.section``;
+export const Section = styled.section`
+  margin-bottom: 36px;
+
+  @media ${selectTablet} {
+    margin-bottom: 100px;
+  }
+
+  @media ${selectDesktop} {
+    margin-bottom: 120px;
+  }
+`;
 
 export const TitleBox = styled.div`
   display: flex;
