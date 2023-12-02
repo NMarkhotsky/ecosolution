@@ -6,9 +6,15 @@ export const Section = styled.section`
   flex-direction: column;
   align-items: center;
   gap: 24px;
+  margin-bottom: 36px;
+
+  @media ${selectTablet} {
+    margin-bottom: 100px;
+  }
 
   @media ${selectDesktop} {
     gap: 16px;
+    margin-bottom: 120px;
   }
 
   & > span {

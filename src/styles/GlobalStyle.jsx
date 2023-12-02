@@ -19,7 +19,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   @media ${selectDesktop} {
-    min-width: 100%;
+    width: 1440px;
     padding: 24px 100px 40px;
   }
 }
