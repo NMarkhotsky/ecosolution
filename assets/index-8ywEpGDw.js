@@ -717,6 +717,10 @@ button {
     font-size: 48px;
     line-height: 48px;
   }
+
+  @media (max-width: 767px) {
+    margin-bottom: 24px;
+  }
 `,X0=P.div`
   display: flex;
   align-items: flex-end;
