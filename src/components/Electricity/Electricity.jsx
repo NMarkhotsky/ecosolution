@@ -11,7 +11,7 @@ export const Electricity = () => {
     }, 1000);
 
     return () => clearInterval(intervalId);
-  }, []); //
+  }, []);
 
   return (
     <Section>
