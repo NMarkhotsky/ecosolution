@@ -43,6 +43,10 @@ export const Title = styled.h2`
     font-size: 48px;
     line-height: 48px;
   }
+
+  @media (max-width: 767px) {
+    margin-bottom: 24px;
+  }
 `;
 
 export const SliderControl = styled.div`
