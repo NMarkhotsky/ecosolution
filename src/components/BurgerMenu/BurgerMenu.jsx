@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { navLink } from '../../constants/navLink';
+import { navLink } from '../../data/index';
 import { Icon } from '../../shared/Icon/Icon';
 import {
   BackDrop,
