@@ -1,7 +1,14 @@
 import { useState } from 'react';
-import { AccordionList, Section, Title } from './FAQ,styled';
+import {
+  AccordionList,
+  Section,
+  Title,
+  WrapperMobContactUs,
+  WrapperTitle,
+} from './FAQ,styled';
 import { faqData } from '../../data/faq';
 import { FAQItem } from './FAQItem';
+import { FAQContactUs } from './FAQContactUs';
 
 export const Faq = () => {
   const [openAccordion, setOpenAccordion] = useState(faqData[0].id);
@@ -12,7 +19,10 @@ export const Faq = () => {
 
   return (
     <Section>
-      <Title>Frequently Asked Questions</Title>
+      <WrapperTitle>
+        <Title>Frequently Asked Questions</Title>
+        <FAQContactUs />
+      </WrapperTitle>
       <AccordionList>
         {faqData.map(({ id, question, answer }) => (
           <FAQItem
@@ -24,11 +34,9 @@ export const Faq = () => {
           />
         ))}
       </AccordionList>
-
-      {/* <div>
-        <p>Didn&apos;t find the answer to your question? </p>
-        <button>Contact us</button>
-      </div> */}
+      <WrapperMobContactUs>
+        <FAQContactUs />
+      </WrapperMobContactUs>
     </Section>
   );
 };

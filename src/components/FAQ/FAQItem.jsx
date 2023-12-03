@@ -4,15 +4,16 @@ import {
   AccordionAnswer,
   AccordionItem,
   AccordionQuestion,
+  Box,
 } from './FAQ,styled';
 
 export const FAQItem = ({ question, answer, toggleAccordion, isOpen }) => {
   return (
     <AccordionItem>
-      <AccordionQuestion onClick={toggleAccordion}>
+      <Box onClick={toggleAccordion}>
         <Icon iconName={isOpen ? 'icon-minus' : 'icon-plus'} />
-        {question}
-      </AccordionQuestion>
+        <AccordionQuestion open={isOpen}>{question}</AccordionQuestion>
+      </Box>
       {isOpen && <AccordionAnswer>{answer}</AccordionAnswer>}
     </AccordionItem>
   );
