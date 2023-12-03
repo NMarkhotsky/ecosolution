@@ -5,6 +5,16 @@ export const Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  margin-bottom: 36px;
+
+  @media ${selectTablet} {
+    margin-bottom: 100px;
+  }
+
+  @media ${selectDesktop} {
+    margin-bottom: 120px;
+  }
 `;
 
 export const Container = styled.div`
