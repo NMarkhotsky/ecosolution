@@ -73,6 +73,8 @@ body {
   color: ${({theme:e})=>e.colors.textMain};
 
   ${""}
+   overflow-anchor: none;
+
 }
 
 h1,
@@ -874,6 +876,7 @@ button {
 
   @media ${L} {
     width: 195px;
+    height: 66px;
 
     font-size: 20px;
     letter-spacing: -0.8px;
@@ -881,6 +884,7 @@ button {
 
   @media ${D} {
     width: 357px;
+    height: auto;
 
     font-size: 24px;
     letter-spacing: -0.64px;
