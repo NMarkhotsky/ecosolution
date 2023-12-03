@@ -355,17 +355,6 @@ button {
   @media ${D} {
     gap: 48px;
   }
-
-  & :has(img) {
-    display: none;
-    padding: 0;
-    grid-column: span 2;
-    background-color: transparent;
-
-    @media ${L} {
-      display: block;
-    }
-  }
 `,Sa=N.li`
   padding: 12px;
   min-height: 197px;
@@ -375,6 +364,17 @@ button {
   @media ${D} {
     padding: 48px 24px;
     height: 339px;
+  }
+
+  &.hasImg {
+    display: none;
+    padding: 0;
+    grid-column: span 2;
+    background-color: transparent;
+
+    @media ${L} {
+      display: block;
+    }
   }
 `,_g=N.img`
   width: 100%;
@@ -436,7 +436,7 @@ button {
     font-size: 16px;
     letter-spacing: -0.64px;
   }
-`,zg=({alt:e,img:t,img2x:n})=>y.jsx(_g,{src:t,alt:`${e}`,srcSet:`${t} 1x, ${n} 2x`}),jg=()=>y.jsxs(xg,{children:[y.jsxs(wg,{children:[y.jsx(Sg,{children:"Main values of our company"}),y.jsxs(kg,{children:[y.jsx("span",{}),y.jsx(Eg,{children:"EcoSolution envisions a world where sustainable energy solutions power a brighter and cleaner future for all. We aspire to be at the forefront of the global shift towards renewable energy, leading the way in innovative technologies that harness the power of nature to meet the world's energy needs."})]})]}),y.jsx(Cg,{children:qm.map(({iconName:e,title:t,description:n,type:r,alt:i,img:o,img2x:l})=>r==="image"?y.jsx(Sa,{children:y.jsx(zg,{alt:i,img:o,img2x:l})},i):y.jsxs(Sa,{children:[y.jsxs($g,{children:[y.jsx(we,{iconName:`${e}`,stroke:"#173D33",style:{marginRight:"8px"}}),t]}),y.jsx(Ng,{}),y.jsx(Pg,{children:n})]},t))})]}),Tg=N.section`
+`,zg=({alt:e,img:t,img2x:n})=>y.jsx(_g,{src:t,alt:`${e}`,srcSet:`${t} 1x, ${n} 2x`}),jg=()=>y.jsxs(xg,{children:[y.jsxs(wg,{children:[y.jsx(Sg,{children:"Main values of our company"}),y.jsxs(kg,{children:[y.jsx("span",{}),y.jsx(Eg,{children:"EcoSolution envisions a world where sustainable energy solutions power a brighter and cleaner future for all. We aspire to be at the forefront of the global shift towards renewable energy, leading the way in innovative technologies that harness the power of nature to meet the world's energy needs."})]})]}),y.jsx(Cg,{children:qm.map(({iconName:e,title:t,description:n,type:r,alt:i,img:o,img2x:l})=>r==="image"?y.jsx(Sa,{className:r==="image"?"hasImg":"",children:y.jsx(zg,{alt:i,img:o,img2x:l})},i):y.jsxs(Sa,{children:[y.jsxs($g,{children:[y.jsx(we,{iconName:`${e}`,stroke:"#173D33",style:{marginRight:"8px"}}),t]}),y.jsx(Ng,{}),y.jsx(Pg,{children:n})]},t))})]}),Tg=N.section`
   margin-top: 146px;
   margin-bottom: 36px;
 
