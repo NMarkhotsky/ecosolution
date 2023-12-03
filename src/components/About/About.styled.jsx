@@ -101,17 +101,6 @@ export const GridList = styled.ul`
   @media ${selectDesktop} {
     gap: 48px;
   }
-
-  & :has(img) {
-    display: none;
-    padding: 0;
-    grid-column: span 2;
-    background-color: transparent;
-
-    @media ${selectTablet} {
-      display: block;
-    }
-  }
 `;
 
 export const GridItem = styled.li`
@@ -123,6 +112,17 @@ export const GridItem = styled.li`
   @media ${selectDesktop} {
     padding: 48px 24px;
     height: 339px;
+  }
+
+  &.hasImg {
+    display: none;
+    padding: 0;
+    grid-column: span 2;
+    background-color: transparent;
+
+    @media ${selectTablet} {
+      display: block;
+    }
   }
 `;
 

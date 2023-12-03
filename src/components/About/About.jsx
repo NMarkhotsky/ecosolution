@@ -34,7 +34,7 @@ export const About = () => {
         {aboutData.map(
           ({ iconName, title, description, type, alt, img, img2x }) =>
             type === 'image' ? (
-              <GridItem key={alt}>
+              <GridItem key={alt} className={type === 'image' ? 'hasImg' : ''}>
                 <AboutImage alt={alt} img={img} img2x={img2x} />
               </GridItem>
             ) : (
