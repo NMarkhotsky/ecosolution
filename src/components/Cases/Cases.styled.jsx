@@ -220,6 +220,7 @@ export const CaseTitle = styled.p`
 
   @media ${selectTablet} {
     width: 195px;
+    height: 66px;
 
     font-size: 20px;
     letter-spacing: -0.8px;
@@ -227,6 +228,7 @@ export const CaseTitle = styled.p`
 
   @media ${selectDesktop} {
     width: 357px;
+    height: auto;
 
     font-size: 24px;
     letter-spacing: -0.64px;
