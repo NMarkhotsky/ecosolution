@@ -4,6 +4,7 @@ import { Hero } from '../Hero/Hero';
 import { Electricity } from '../Electricity/Electricity';
 import { Cases } from '../Cases/Cases';
 import { Faq } from '../FAQ/FAQ';
+import { ContactUs } from '../ContactUs/ContactUs';
 
 export const Main = () => {
   return (
@@ -13,6 +14,7 @@ export const Main = () => {
       <Electricity />
       <Cases />
       <Faq />
+      <ContactUs />
     </MainContainer>
   );
 };
