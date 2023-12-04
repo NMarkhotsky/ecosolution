@@ -57,7 +57,7 @@ Error generating stack: `+o.message+`
   }
 
   @media ${M} {
-    width: 1440px;
+    width: 1280px;
     padding: 24px 100px 40px;
   }
 }
@@ -137,7 +137,7 @@ button {
   }
 
   @media ${M} {
-    width: 1440px;
+    width: 1280px;
     padding: 24px 100px 5px 100px;
   }
 `,ph=F.a`
