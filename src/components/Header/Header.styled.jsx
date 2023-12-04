@@ -13,8 +13,8 @@ export const HeaderContainer = styled.header`
   width: 100%;
   transition: ${({ theme }) => theme.transitionHover};
 
-  background-color: ${({ isScrolling }) =>
-    isScrolling ? 'transparent' : 'rgba(243, 245, 250, 0.7)'};
+  background-color: ${({ $isScrolling }) =>
+    $isScrolling ? 'transparent' : 'rgba(243, 245, 250, 0.7)'};
 
   @media ${selectPhone} {
     width: 480px;

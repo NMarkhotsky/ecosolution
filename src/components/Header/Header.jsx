@@ -42,7 +42,7 @@ export const Header = () => {
     };
   }, []);
   return (
-    <HeaderContainer isScrolling={isScrolling}>
+    <HeaderContainer $isScrolling={isScrolling}>
       <Logo href="/">
         <Icon
           iconName="icon-favicon_logo"
