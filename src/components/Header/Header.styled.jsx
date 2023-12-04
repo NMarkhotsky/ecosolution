@@ -1,10 +1,34 @@
 import styled from 'styled-components';
-import { selectTablet } from '../../utils';
+import { selectDesktop, selectPhone, selectTablet } from '../../utils';
 
 export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding: 36px 20px 5px 20px;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  transition: ${({ theme }) => theme.transitionHover};
+
+  background-color: ${({ isScrolling }) =>
+    isScrolling ? 'transparent' : 'rgba(243, 245, 250, 0.7)'};
+
+  @media ${selectPhone} {
+    width: 480px;
+  }
+
+  @media ${selectTablet} {
+    min-width: 100%;
+    padding: 36px 30px 5px 30px;
+  }
+
+  @media ${selectDesktop} {
+    width: 1440px;
+    padding: 24px 100px 5px 100px;
+  }
 `;
 
 export const Logo = styled.a`

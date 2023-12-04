@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Icon } from '../../shared/Icon/Icon';
 import {
   HeaderContainer,
@@ -12,13 +12,37 @@ import { scrollToElement } from '../../utils';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
+  const scrollTimeoutRef = useRef(null);
 
   const handleToggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleScroll = () => {
+    setIsScrolling(true);
+
+    if (scrollTimeoutRef.current !== null) {
+      clearTimeout(scrollTimeoutRef.current);
+    }
+
+    scrollTimeoutRef.current = setTimeout(() => {
+      setIsScrolling(false);
+    }, 250);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (scrollTimeoutRef.current !== null) {
+        clearTimeout(scrollTimeoutRef.current);
+      }
+    };
+  }, []);
   return (
-    <HeaderContainer>
+    <HeaderContainer isScrolling={isScrolling}>
       <Logo href="/">
         <Icon
           iconName="icon-favicon_logo"
