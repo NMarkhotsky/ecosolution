@@ -27,7 +27,7 @@ export const HeaderContainer = styled.header`
   }
 
   @media ${selectDesktop} {
-    width: 1440px;
+    width: 1280px;
     padding: 24px 100px 5px 100px;
   }
 `;
