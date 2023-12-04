@@ -11,6 +11,7 @@ export const HeaderContainer = styled.header`
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
+
   transition: ${({ theme }) => theme.transitionHover};
 
   background-color: ${({ $isScrolling }) =>
@@ -21,7 +22,7 @@ export const HeaderContainer = styled.header`
   }
 
   @media ${selectTablet} {
-    min-width: 100%;
+    width: 100%;
     padding: 36px 30px 5px 30px;
   }
 
