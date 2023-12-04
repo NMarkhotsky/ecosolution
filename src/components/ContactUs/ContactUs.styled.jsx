@@ -60,6 +60,10 @@ export const ContactContainer = styled.div`
     gap: 32px;
     width: 466px;
   }
+
+  & > div {
+    cursor: pointer;
+  }
 `;
 
 export const ContactLabel = styled.p`
@@ -75,20 +79,69 @@ export const ContactLabel = styled.p`
   }
 `;
 
-export const ContactText = styled.p`
+export const ContactText = styled.a`
   display: flex;
   gap: 8px;
   text-align: justify;
   font-size: 20px;
   line-height: normal;
   letter-spacing: -0.8px;
+
+  & > svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+
+    & > use {
+      stroke: #173d33;
+    }
+  }
+
+  &:hover {
+    & > svg > use {
+      stroke: #97d28b;
+    }
+  }
 `;
 
 export const SocialWrapper = styled.div`
-  & > svg:last-child {
+  /* display: flex; */
+  /* flex-direction: column; */
+
+  /* & > a:last-child {
     margin-left: 32px;
     @media ${selectDesktop} {
       margin-left: 8px;
+    }
+  } */
+
+  & > div {
+    display: flex;
+    gap: 32px;
+
+    @media ${selectDesktop} {
+      gap: 8px;
+    }
+  }
+`;
+
+export const Link = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > svg {
+    width: 24px;
+    height: 24px;
+
+    & > use {
+      stroke: #173d33;
+    }
+  }
+
+  &:hover {
+    & > svg > use {
+      stroke: #97d28b;
     }
   }
 `;

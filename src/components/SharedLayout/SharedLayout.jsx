@@ -5,7 +5,7 @@ import { Footer } from '../Footer/Footer';
 export const SharedLayout = () => {
   return (
     <>
-      <Header>Header</Header>
+      <Header />
       <Main />
       <Footer />
     </>

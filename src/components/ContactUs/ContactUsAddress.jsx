@@ -3,6 +3,7 @@ import {
   ContactContainer,
   ContactLabel,
   ContactText,
+  Link,
   SocialWrapper,
 } from './ContactUs.styled';
 
@@ -12,33 +13,18 @@ export const ContactUsAddress = () => {
       <div>
         <ContactLabel>Phone:</ContactLabel>
         <ContactText>
-          <Icon
-            iconName="icon-phone"
-            width={24}
-            height={24}
-            stroke={'#173D33'}
-          />
+          <Icon iconName="icon-phone" />
           38 (098) 12 34 567
         </ContactText>
         <ContactText style={{ marginTop: '12px' }}>
-          <Icon
-            iconName="icon-phone"
-            width={24}
-            height={24}
-            stroke={'#173D33'}
-          />
+          <Icon iconName="icon-phone" />
           38 (093) 12 34 567
         </ContactText>
       </div>
       <div>
         <ContactLabel>E-mail:</ContactLabel>
         <ContactText>
-          <Icon
-            iconName="icon-email"
-            width={24}
-            height={24}
-            stroke={'#173D33'}
-          />
+          <Icon iconName="icon-email" />
           office@ecosolution.com
         </ContactText>
       </div>
@@ -51,18 +37,14 @@ export const ContactUsAddress = () => {
       </div>
       <SocialWrapper>
         <ContactLabel>Social Networks:</ContactLabel>
-        <Icon
-          iconName="icon-facebook"
-          width={24}
-          height={24}
-          stroke={'#173D33'}
-        />
-        <Icon
-          iconName="icon-instagram"
-          width={24}
-          height={24}
-          stroke={'#173D33'}
-        />
+        <div>
+          <Link href="#">
+            <Icon iconName="icon-facebook" />
+          </Link>
+          <Link href="#">
+            <Icon iconName="icon-instagram" />
+          </Link>
+        </div>
       </SocialWrapper>
     </ContactContainer>
   );

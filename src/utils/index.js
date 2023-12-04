@@ -4,5 +4,12 @@ import {
   selectDesktop,
 } from './selectMediaRequests';
 import { formatNumberWithDots } from './formatNumber';
+import { scrollToTopButton } from './scrollToTopButton';
 
-export { selectPhone, selectTablet, selectDesktop, formatNumberWithDots };
+export {
+  selectPhone,
+  selectTablet,
+  selectDesktop,
+  formatNumberWithDots,
+  scrollToTopButton,
+};
