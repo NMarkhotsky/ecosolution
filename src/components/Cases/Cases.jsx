@@ -33,7 +33,7 @@ export const Cases = () => {
   };
 
   return (
-    <Section>
+    <Section id="cases">
       <Container>
         <Title>Successful cases of our company</Title>
         <SliderControl>

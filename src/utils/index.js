@@ -5,6 +5,7 @@ import {
 } from './selectMediaRequests';
 import { formatNumberWithDots } from './formatNumber';
 import { scrollToTopButton } from './scrollToTopButton';
+import { scrollToElement } from './scrollToElement';
 
 export {
   selectPhone,
@@ -12,4 +13,5 @@ export {
   selectDesktop,
   formatNumberWithDots,
   scrollToTopButton,
+  scrollToElement,
 };

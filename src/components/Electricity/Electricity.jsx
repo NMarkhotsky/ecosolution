@@ -14,7 +14,7 @@ export const Electricity = () => {
   }, []);
 
   return (
-    <Section>
+    <Section id="electricity">
       <Title>Electricity we produced for all time</Title>
       <span></span>
       <Text>

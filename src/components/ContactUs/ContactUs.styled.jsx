@@ -93,28 +93,20 @@ export const ContactText = styled.a`
     flex-shrink: 0;
 
     & > use {
+      transition: ${({ theme }) => theme.transitionHover};
       stroke: #173d33;
     }
   }
 
   &:hover {
     & > svg > use {
+      transition: ${({ theme }) => theme.transitionHover};
       stroke: #97d28b;
     }
   }
 `;
 
 export const SocialWrapper = styled.div`
-  /* display: flex; */
-  /* flex-direction: column; */
-
-  /* & > a:last-child {
-    margin-left: 32px;
-    @media ${selectDesktop} {
-      margin-left: 8px;
-    }
-  } */
-
   & > div {
     display: flex;
     gap: 32px;
@@ -135,12 +127,14 @@ export const Link = styled.a`
     height: 24px;
 
     & > use {
+      transition: ${({ theme }) => theme.transitionHover};
       stroke: #173d33;
     }
   }
 
   &:hover {
     & > svg > use {
+      transition: ${({ theme }) => theme.transitionHover};
       stroke: #97d28b;
     }
   }
@@ -241,9 +235,12 @@ export const Button = styled.button`
   line-height: 18px;
   letter-spacing: -0.64px;
 
+  transition: ${({ theme }) => theme.transitionHover};
+
   &:hover,
   &:focus,
   &:active {
+    transition: ${({ theme }) => theme.transitionHover};
     border: 1px solid #173d33;
     background-color: #173d33;
     color: #97d28b;

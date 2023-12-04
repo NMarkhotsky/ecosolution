@@ -68,14 +68,14 @@ export const SubTitle = styled.p`
   }
 `;
 
-export const Button = styled.button`
+export const Button = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
+  width: 141px;
 
-  margin: 0 auto;
-  margin-bottom: 24px; // Тимчасово
+  margin: 0 auto 24px auto;
   padding: 4px 4px 4px 16px;
 
   border-radius: 500px;
@@ -88,12 +88,14 @@ export const Button = styled.button`
     margin: 0;
   }
 
-  &:hover,
-  &:focus,
-  &:active {
+  transition: ${({ theme }) => theme.transitionHover};
+
+  &:hover {
     border: 1px solid #173d33;
     background-color: #173d33;
     color: #97d28b;
+
+    transition: ${({ theme }) => theme.transitionHover};
   }
 
   & > span {

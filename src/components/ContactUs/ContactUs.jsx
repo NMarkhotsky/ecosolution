@@ -4,7 +4,7 @@ import { ContactUsForm } from './ContactUsForm';
 
 export const ContactUs = () => {
   return (
-    <Section>
+    <Section id="contact-us">
       <Title>Contact us</Title>
       <Wrapper>
         <ContactUsAddress />

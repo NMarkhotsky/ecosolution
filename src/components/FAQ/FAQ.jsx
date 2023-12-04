@@ -18,7 +18,7 @@ export const Faq = () => {
   };
 
   return (
-    <Section>
+    <Section id="faq">
       <WrapperTitle>
         <Title>Frequently Asked Questions</Title>
         <FAQContactUs />

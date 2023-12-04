@@ -129,8 +129,12 @@ export const SliderButton = styled.button`
     padding: 24px;
   }
 
+  transition: ${({ theme }) => theme.transitionHover};
+
   &:hover {
     border-color: #97d28b;
+
+    transition: ${({ theme }) => theme.transitionHover};
 
     & > svg {
       & > use {
@@ -144,12 +148,15 @@ export const SliderButton = styled.button`
     height: 36px;
 
     & > use {
+      transition: ${({ theme }) => theme.transitionHover};
       stroke: #173d33;
     }
   }
 `;
 
 export const CasesCardList = styled.ul`
+  overflow: hidden;
+
   @media ${selectTablet} {
     display: flex;
     align-items: center;
@@ -245,6 +252,8 @@ export const CaseButton = styled.button`
   border-radius: 50%;
   background-color: #97d28b;
 
+  transition: ${({ theme }) => theme.transitionHover};
+
   &:hover {
     background-color: #173d33;
 
@@ -260,6 +269,7 @@ export const CaseButton = styled.button`
     height: 28px;
 
     & > use {
+      transition: ${({ theme }) => theme.transitionHover};
       stroke: #173d33;
     }
   }

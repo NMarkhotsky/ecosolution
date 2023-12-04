@@ -14,7 +14,7 @@ export const FAQItem = ({ question, answer, toggleAccordion, isOpen }) => {
         <Icon iconName={isOpen ? 'icon-minus' : 'icon-plus'} />
         <AccordionQuestion open={isOpen}>{question}</AccordionQuestion>
       </Box>
-      {isOpen && <AccordionAnswer>{answer}</AccordionAnswer>}
+      {isOpen && <AccordionAnswer open={isOpen}>{answer}</AccordionAnswer>}
     </AccordionItem>
   );
 };

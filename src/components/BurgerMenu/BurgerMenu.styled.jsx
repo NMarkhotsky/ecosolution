@@ -60,6 +60,22 @@ export const ButtonClose = styled.button`
   align-items: center;
 
   color: #fff;
+
+  & > svg {
+    width: 20px;
+    height: 20px;
+
+    & > use {
+      stroke: #ffffff;
+    }
+  }
+
+  &:hover {
+    color: #97d28b;
+    & > svg > use {
+      stroke: #97d28b;
+    }
+  }
 `;
 
 export const Nav = styled.nav`
@@ -73,15 +89,14 @@ export const NavList = styled.ul`
 `;
 
 export const NavListItem = styled.li`
-  color: #fff;
-  stroke: #fff;
-
+  color: ${(props) =>
+    props['data-isactive'] ? '#fff' : 'rgba(255, 255, 255, 0.25)'};
+  stroke: ${(props) =>
+    props['data-isactive'] ? '#fff' : 'rgba(255, 255, 255, 0.25)'};
   font-size: 24px;
   letter-spacing: -0.96px;
 
-  &:hover,
-  :active,
-  :focus {
+  &:hover {
     color: #97d28b;
     stroke: #97d28b;
   }
@@ -99,15 +114,21 @@ export const NavSocial = styled.ul`
   margin-top: auto;
 `;
 
-export const NavSocialLink = styled.li`
-  & > svg > use {
-    stroke: #ffffff;
+export const NavSocialLink = styled.li``;
+
+export const Link = styled.a`
+  & > svg {
+    width: 24px;
+    height: 24px;
+
+    & > use {
+      stroke: #ffffff;
+    }
   }
 
-  & :hover,
-  :active,
-  :focus {
-    stroke: #97d28b;
-    /* fill: #97d28b; */
+  &:hover {
+    & > svg > use {
+      stroke: #97d28b;
+    }
   }
 `;

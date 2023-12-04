@@ -65,11 +65,14 @@ export const ButtonScroll = styled.button`
   letter-spacing: -0.64px;
   background-color: #97d28b;
 
+  transition: ${({ theme }) => theme.transitionHover};
+
   &:hover {
     background-color: #173d33;
 
     & > svg > use {
       stroke: #97d28b;
+      transition: ${({ theme }) => theme.transitionHover};
     }
   }
 
@@ -80,6 +83,7 @@ export const ButtonScroll = styled.button`
     border-radius: 50%;
     & > use {
       stroke: #173d33;
+      transition: ${({ theme }) => theme.transitionHover};
     }
   }
 `;
@@ -104,12 +108,14 @@ export const Link = styled.a`
 
     & > use {
       stroke: #173d33;
+      transition: ${({ theme }) => theme.transitionHover};
     }
   }
 
   &:hover {
     & > svg > use {
       stroke: #97d28b;
+      transition: ${({ theme }) => theme.transitionHover};
     }
   }
 `;

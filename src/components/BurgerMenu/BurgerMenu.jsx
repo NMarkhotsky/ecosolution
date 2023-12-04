@@ -1,10 +1,13 @@
 /* eslint-disable react/prop-types */
+import { useState } from 'react';
 import { navLink } from '../../data/index';
 import { Icon } from '../../shared/Icon/Icon';
+import { scrollToElement } from '../../utils';
 import {
   BackDrop,
   ButtonClose,
   Container,
+  Link,
   Nav,
   NavList,
   NavListItem,
@@ -13,24 +16,29 @@ import {
 } from './BurgerMenu.styled';
 
 export const BurgerMenu = ({ onClose }) => {
+  const [activeMenuItem, setActiveMenuItem] = useState(null);
+
   return (
     <BackDrop>
       <Container>
         <ButtonClose onClick={() => onClose()}>
-          <Icon
-            iconName="icon-close"
-            width={'20px'}
-            height={'20px'}
-            stroke={'#fff'}
-          />
+          <Icon iconName="icon-close" />
           close
         </ButtonClose>
         <span></span>
         <Nav>
           <NavList>
-            {navLink.map(({ id, name }) => (
-              <NavListItem key={id}>
-                <a href="#">
+            {navLink.map(({ id, name, href }) => (
+              <NavListItem key={id} data-isactive={id === activeMenuItem}>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToElement(href);
+                    setActiveMenuItem(id);
+                    onClose();
+                  }}
+                >
                   {name}
                   <Icon
                     iconName="icon-arrow-top-right"
@@ -45,10 +53,14 @@ export const BurgerMenu = ({ onClose }) => {
         </Nav>
         <NavSocial>
           <NavSocialLink>
-            <Icon iconName="icon-facebook" width={24} height={24} />
+            <Link href="#">
+              <Icon iconName="icon-facebook" width={24} height={24} />
+            </Link>
           </NavSocialLink>
           <NavSocialLink>
-            <Icon iconName="icon-instagram" width={24} height={24} />
+            <Link href="#">
+              <Icon iconName="icon-instagram" width={24} height={24} />
+            </Link>
           </NavSocialLink>
         </NavSocial>
       </Container>

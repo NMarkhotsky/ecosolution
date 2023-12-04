@@ -1,5 +1,16 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { selectTablet, selectDesktop } from '../../utils';
+
+const animation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 export const Section = styled.section`
   margin-bottom: 36px;
@@ -78,14 +89,17 @@ export const AccordionItem = styled.li`
   @media ${selectDesktop} {
     width: 596px;
   }
+
+  transition: ${({ theme }) => theme.transitionHover};
 `;
 
 export const Box = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
-
   cursor: pointer;
+
+  transition: ${({ theme }) => theme.transitionHover};
 
   @media ${selectTablet} {
     gap: 16px;
@@ -124,9 +138,22 @@ export const AccordionQuestion = styled.h3`
     font-size: 24px;
     letter-spacing: -0.96px;
   }
+
+  transition: ${({ theme }) => theme.transitionHover};
 `;
 
 export const AccordionAnswer = styled.p`
+  opacity: 0;
+  transform: translateY(-100%);
+  animation: ${animation} 0.5s ease;
+
+  ${(props) =>
+    props.open &&
+    `
+    opacity: 1;
+    transform: translateY(0);
+  `}
+
   margin-left: 24px;
 
   text-align: justify;
@@ -145,6 +172,8 @@ export const AccordionAnswer = styled.p`
     font-size: 16px;
     letter-spacing: -0.64px;
   }
+
+  transition: ${({ theme }) => theme.transitionHover};
 `;
 
 export const ContactUsContainer = styled.div`
@@ -153,6 +182,8 @@ export const ContactUsContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 12px;
+
+  transition: ${({ theme }) => theme.transitionHover};
 `;
 
 export const ContactUsText = styled.p`
@@ -167,7 +198,7 @@ export const ContactUsText = styled.p`
   }
 `;
 
-export const ContactUsButton = styled.button`
+export const ContactUsButton = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,17 +209,32 @@ export const ContactUsButton = styled.button`
 
   background-color: #97d28b;
 
-  &::after {
-    content: '';
-    width: 14px;
-    height: 14px;
+  transition: ${({ theme }) => theme.transitionHover};
+
+  & > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
     background-color: #173d33;
+
+    transition: ${({ theme }) => theme.transitionHover};
+  }
+
+  &:hover {
+    color: #97d28b;
+    background-color: #173d33;
+
+    & > span {
+      background-color: #97d28b;
+    }
   }
 `;
 
 export const WrapperMobContactUs = styled.div`
   margin-top: 36px;
+
+  transition: ${({ theme }) => theme.transitionHover};
 
   @media ${selectTablet} {
     display: none;

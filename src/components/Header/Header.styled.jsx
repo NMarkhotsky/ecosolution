@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { selectDesktop, selectPhone, selectTablet } from '../../utils';
+import { selectTablet } from '../../utils';
 
 export const HeaderContainer = styled.header`
   display: flex;
@@ -14,8 +14,11 @@ export const Logo = styled.a`
 
   fill: #173d33;
 
-  :hover {
+  transition: ${({ theme }) => theme.transitionHover};
+
+  &:hover {
     fill: #97d28b;
+    transition: ${({ theme }) => theme.transitionHover};
   }
 
   & > svg:first-child,
@@ -29,14 +32,8 @@ export const MenuWrapper = styled.div`
   display: flex;
   align-items: center;
 
-  @media ${selectPhone} {
-  }
-
   @media ${selectTablet} {
     gap: 12px;
-  }
-
-  @media ${selectDesktop} {
   }
 `;
 
@@ -46,6 +43,22 @@ export const ButtonMenu = styled.button`
 
   border-radius: 50%;
   background-color: #dcefd8;
+
+  & > svg {
+    width: 20px;
+    height: 20px;
+
+    & > use {
+      stroke: #292d32;
+    }
+  }
+
+  transition: ${({ theme }) => theme.transitionHover};
+
+  &:hover {
+    background-color: #97d28b;
+    transition: ${({ theme }) => theme.transitionHover};
+  }
 `;
 
 export const ButtonGetInTouch = styled.a`
@@ -57,15 +70,30 @@ export const ButtonGetInTouch = styled.a`
     justify-content: center;
     align-items: center;
     gap: 12px;
+
     border-radius: 500px;
     background-color: #97d28b;
 
-    &::after {
-      content: '';
-      width: 14px;
-      height: 14px;
+    & > span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       border-radius: 50%;
       background-color: #173d33;
+      transition: ${({ theme }) => theme.transitionHover};
+    }
+
+    transition: ${({ theme }) => theme.transitionHover};
+
+    &:hover {
+      color: #97d28b;
+      background-color: #173d33;
+
+      transition: ${({ theme }) => theme.transitionHover};
+
+      & > span {
+        background-color: #97d28b;
+      }
     }
   }
 `;

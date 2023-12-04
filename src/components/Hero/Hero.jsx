@@ -15,10 +15,11 @@ import {
 import heroImage from '../../assets/images/hero/hero.png';
 import heroImage2x from '../../assets/images/hero/hero@2x.png';
 import heroImage3x from '../../assets/images/hero/hero@3x.png';
+import { scrollToElement } from '../../utils';
 
 export const Hero = () => {
   return (
-    <Section>
+    <Section id="hero">
       <Container>
         <Title>RENEWABLE ENERGY For any task</Title>
         <div>
@@ -27,7 +28,13 @@ export const Hero = () => {
             sources, generating power generation using energy wind, sun, water,
             biomass
           </SubTitle>
-          <Button>
+          <Button
+            href="#cases"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToElement('cases');
+            }}
+          >
             Learn More
             <span>
               <Icon

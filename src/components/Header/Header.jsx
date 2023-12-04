@@ -8,6 +8,7 @@ import {
   ButtonGetInTouch,
 } from './Header.styled';
 import { BurgerMenu } from '../BurgerMenu/BurgerMenu';
+import { scrollToElement } from '../../utils';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,7 +50,18 @@ export const Header = () => {
           />
         </ButtonMenu>
         {isOpen && <BurgerMenu onClose={handleToggleMenu} />}
-        <ButtonGetInTouch href="#">Get in touch</ButtonGetInTouch>
+        <ButtonGetInTouch
+          href="#contact-us"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToElement('contact-us');
+          }}
+        >
+          Get in touch
+          <span>
+            <Icon iconName="icon-arrow-down" width={14} height={14} />
+          </span>
+        </ButtonGetInTouch>
       </MenuWrapper>
     </HeaderContainer>
   );

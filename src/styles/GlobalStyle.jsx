@@ -33,9 +33,8 @@ body {
 
   background-color: ${({ theme }) => theme.colors.backgroundMain};
   color: ${({ theme }) => theme.colors.textMain};
-
-  ${'' /* transition: ${({ theme }) => theme.transitionHover}; */}
-   overflow-anchor: none;
+  
+  overflow-anchor: none;
 
 }
 

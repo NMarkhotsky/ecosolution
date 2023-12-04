@@ -16,7 +16,7 @@ import { AboutImage } from './AboutImage';
 
 export const About = () => {
   return (
-    <Section>
+    <Section id="about">
       <TitleBox>
         <Title>Main values of our company</Title>
         <DescriptionBox>
