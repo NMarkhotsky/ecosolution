@@ -122,6 +122,7 @@ button {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
+
   transition: ${({theme:e})=>e.transitionHover};
 
   background-color: ${({$isScrolling:e})=>e?"transparent":"rgba(243, 245, 250, 0.7)"};
@@ -131,7 +132,7 @@ button {
   }
 
   @media ${R} {
-    min-width: 100%;
+    width: 100%;
     padding: 36px 30px 5px 30px;
   }
 
