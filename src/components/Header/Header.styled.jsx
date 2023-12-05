@@ -17,13 +17,17 @@ export const HeaderContainer = styled.header`
   background-color: ${({ $isScrolling }) =>
     $isScrolling ? 'transparent' : 'rgba(243, 245, 250, 0.7)'};
 
+  @media ${selectPhone} {
+    width: 480px;
+  }
+
   @media ${selectTablet} {
-    max-width: 100%;
+    width: 100%;
     padding: 36px 30px 5px 30px;
   }
 
   @media ${selectDesktop} {
-    max-width: 100%;
+    width: 1280px;
     padding: 24px 100px 5px 100px;
   }
 `;
