@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { selectDesktop, selectPhone, selectTablet } from '../../utils';
+import { selectDesktop, selectTablet } from '../../utils';
 
 export const HeaderContainer = styled.header`
   display: flex;
@@ -17,17 +17,13 @@ export const HeaderContainer = styled.header`
   background-color: ${({ $isScrolling }) =>
     $isScrolling ? 'transparent' : 'rgba(243, 245, 250, 0.7)'};
 
-  @media ${selectPhone} {
-    width: 480px;
-  }
-
   @media ${selectTablet} {
-    width: 100%;
+    max-width: 100%;
     padding: 36px 30px 5px 30px;
   }
 
   @media ${selectDesktop} {
-    width: 1280px;
+    max-width: 100%;
     padding: 24px 100px 5px 100px;
   }
 `;
