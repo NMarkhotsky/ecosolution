@@ -43,7 +43,7 @@ export const Header = () => {
   }, []);
   return (
     <HeaderContainer $isScrolling={isScrolling}>
-      <Logo href="/">
+      <Logo href="/ecosolution/">
         <Icon
           iconName="icon-favicon_logo"
           width={'31px'}
